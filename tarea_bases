@@ -16,4 +16,4 @@ final=""
 for a in resultado:
     b=str(a)
     final=final+b
-print(num,"escrito en base ",mo,"en base ", final)
+print(num,"escrito en base ",mo,"en base", final)

@@ -1,0 +1,19 @@
+num=int(input("ingrese un numero en base 10 "))
+mo=int(input("ingrese la base a la cual quiere pasar "))
+resultado=[]
+
+r=num%mo
+c=num//mo
+resultado.append(r)
+while c>mo:
+    r=c%mo
+    c=c//mo
+    resultado.append(r)
+resultado.append(c)  
+resultado.reverse()
+final=""
+
+for a in resultado:
+    b=str(a)
+    final=final+b
+print(num,"escrito en base ",mo,"en base ", final)

@@ -2,17 +2,19 @@ n1=int(input("ingrese primer numero "))
 n2=int(input("ingrese segundo numero "))
 contador=0
 def comprobar_primos(a):
+    co=0
     for n in range(2,a):
         if a % n ==0:
-            
-            return False
-        else:
-            return True
+            co+=1    
+    if co>0:
+        return False
+    else:
+        return True
 
 for f in range(n1, n2+1):
     comprobar_primos(f)
-    if comprobar_primos(f)==False:
+    if comprobar_primos(f)==True:
         contador=contador+1
     else:
         contador+=0
-print("hay ",contador," numeros primos entre ",n1," y ",n2)       
+print("hay ",contador," numeros primos entre ",n1," y ",n2)     

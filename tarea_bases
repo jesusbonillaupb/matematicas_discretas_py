@@ -1,19 +1,39 @@
-num=int(input("ingrese un numero en base 10 "))
-mo=int(input("ingrese la base a la cual quiere pasar "))
-resultado=[]
+print("hola bienvenido, elige una opcion ")
+print("1-convertir un numero de cualquier base a base 10 \n2-convertir un numero en base 10 cualquier otra base")
+pregunta1=int(input("escribe el numero de la opcion aqui:")) 
 
-r=num%mo
-c=num//mo
-resultado.append(r)
-while c>mo:
-    r=c%mo
-    c=c//mo
+
+if pregunta1==2:
+    num=int(input("\ningrese un numero en base 10: "))
+    mo=int(input("ingrese la base a la cual quiere pasar "))
+    resultado=[]
+    r=num%mo
+    c=num//mo
     resultado.append(r)
-resultado.append(c)  
-resultado.reverse()
-final=""
+    while c>mo:
+        r=c%mo
+        c=c//mo
+        resultado.append(r)
+    resultado.append(c)  
+    resultado.reverse()
+    final=""
 
-for a in resultado:
-    b=str(a)
-    final=final+b
-print(num,"escrito en base ",mo,"equivale a ", final)
+    for a in resultado:
+        b=str(a)
+        final=final+b
+    print(num,"escrito en base ",mo,"equivale a ", final)
+if pregunta1==1:
+    mo2=int(input("escriba la base del numero que vas a escribir: "))
+    num2=input("escribe el numero que vas a pasar a base 10: ")
+    d=len(num2)
+    c=0
+    digitos=[]
+    for i in num2:   
+        n=int(i)
+        d=d-1
+        b=n*(mo2**d)
+        c=c+b
+    print(num2,"en base",mo2,"a base 10 es:",c)
+        
+if pregunta1!=1 or pregunta1!=2:
+    print("vuelve a ejecutar el programa y elige una opcion valida")

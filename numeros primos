@@ -1,6 +1,7 @@
 n1=int(input("ingrese primer numero "))
 n2=int(input("ingrese segundo numero "))
 contador=0
+listaprimos=[]
 def comprobar_primos(a):
     co=0
     for n in range(2,a):
@@ -9,12 +10,15 @@ def comprobar_primos(a):
     if co>0:
         return False
     else:
-        return True
 
+        return True
+    
 for f in range(n1, n2+1):
     comprobar_primos(f)
     if comprobar_primos(f)==True:
         contador=contador+1
+        listaprimos.append(f)
     else:
         contador+=0
-print("hay ",contador," numeros primos entre ",n1," y ",n2)     
+print("hay ",contador," numeros primos entre ",n1," y ",n2) 
+print("y estos son ",listaprimos)    

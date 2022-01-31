@@ -1,0 +1,13 @@
+n1=1
+n2=1
+r=n1+n2
+while r<10000:   
+    n1=r
+    r=n2+n1
+    if r>=1000 and r<=10000:    
+        print(r)
+    n2=r
+    r=n1+n2
+    if r>=1000 and r<=10000:    
+        print(r)
+
